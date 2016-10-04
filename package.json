@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/jpeterson88/ReactBio/issues"
   },
-  "homepage": "https://github.com/jpeterson88/ReactBio#readme"
+  "homepage": "https://github.com/jpeterson88/ReactBio#readme",
+  "dependencies": {
+    "babel-core": "^6.17.0",
+    "bootstrap": "^3.3.7",
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.16.0"
+  }
 }
