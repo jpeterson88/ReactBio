@@ -10,10 +10,13 @@ app.use( bodyParser.json());
 //change to be dynamic
 app.listen(5000);
 
-
-app.get('/[^\.]+$', function(req, res){
+app.get('/', function(req, res){
     res.set('Content-Type', 'text/html')
-        .sendfile(__dirname + '/src/index.html');
+        .sendFile(__dirname + '/src/index.html');
+});
+
+app.get('/test', function(req, res) {
+	res.send('hello world');
 });
 
 var transporter = nodemailer.createTransport({
@@ -44,10 +47,5 @@ var htmlTpl = '<h4>Message from' + ' ' + req.body.params.name + '</h4><p><span>'
         transporter.close();
     });
 });
-
-router.get('/test', function(req, res) {
-	res.json({ message: 'hooray! welcome to our api!' });
-});
-
 
 app.use('/api', router);
