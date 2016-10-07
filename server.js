@@ -6,6 +6,7 @@ var nodemailer = require('nodemailer');
 
 app.use(express.static(__dirname));
 app.use( bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //change to be dynamic
 app.listen(5000);
@@ -15,16 +16,16 @@ app.get('/', function(req, res){
         .sendFile(__dirname + '/src/index.html');
 });
 
-app.get('/test', function(req, res) {
-	res.send('hello world');
-});
-
 var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
         user: '',
         pass: ''
     }
+});
+
+app.post('/test', function(req, res){
+  res.json({"Test": "field"});
 });
 
 router.post('/contact', function(req, res) {

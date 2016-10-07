@@ -1,7 +1,6 @@
 import React, {PropTypes} from 'react';
 import Header from './header';
 
-
 class app extends React.Component{
 	render(){
 		return(
