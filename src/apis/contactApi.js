@@ -1,7 +1,5 @@
 class contactApi{
 	static sendContactEmal(){
-		debugger;
-		//logic for sending email to node here
 		new Promise((res, rej) => {
 			fetch("/test",
 			{
@@ -12,7 +10,10 @@ class contactApi{
 					method: "POST",
 					body: JSON.stringify({a: 1, b: 2})
 			})
-			.then(function(res){debugger; console.log(res) })
+			//returns promise
+			.then(function(res){ return res.json(); })
+			//gets called after promise completes
+			.then(function(j){ debugger; console.log(j); })
 			.catch(function(res){debugger; console.log(res) })
 		});
 	}

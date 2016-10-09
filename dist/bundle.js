@@ -36832,15 +36832,19 @@
 
 	var _app2 = _interopRequireDefault(_app);
 
-	var _aboutPage = __webpack_require__(564);
+	var _portfolioPage = __webpack_require__(564);
 
-	var _aboutPage2 = _interopRequireDefault(_aboutPage);
+	var _portfolioPage2 = _interopRequireDefault(_portfolioPage);
 
-	var _homePage = __webpack_require__(565);
+	var _interestsPage = __webpack_require__(565);
+
+	var _interestsPage2 = _interopRequireDefault(_interestsPage);
+
+	var _homePage = __webpack_require__(566);
 
 	var _homePage2 = _interopRequireDefault(_homePage);
 
-	var _contactPage = __webpack_require__(566);
+	var _contactPage = __webpack_require__(567);
 
 	var _contactPage2 = _interopRequireDefault(_contactPage);
 
@@ -36850,7 +36854,8 @@
 		_reactRouter.Route,
 		{ path: '/', component: _app2.default },
 		_react2.default.createElement(_reactRouter.IndexRoute, { component: _homePage2.default }),
-		_react2.default.createElement(_reactRouter.Route, { path: '/about', component: _aboutPage2.default }),
+		_react2.default.createElement(_reactRouter.Route, { path: '/portfolio', component: _portfolioPage2.default }),
+		_react2.default.createElement(_reactRouter.Route, { path: '/interests', component: _interestsPage2.default }),
 		_react2.default.createElement(_reactRouter.Route, { path: '/contact', component: _contactPage2.default })
 	);
 
@@ -36942,8 +36947,14 @@
 			" | ",
 			_react2.default.createElement(
 				_reactRouter.Link,
-				{ to: '/about', activeClassName: 'active' },
-				'About'
+				{ to: '/portfolio', activeClassName: 'active' },
+				'Portfolio'
+			),
+			" | ",
+			_react2.default.createElement(
+				_reactRouter.Link,
+				{ to: '/interests', activeClassName: 'active' },
+				'Interests'
 			),
 			" | ",
 			_react2.default.createElement(
@@ -36980,16 +36991,16 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var aboutPage = function (_React$Component) {
-		_inherits(aboutPage, _React$Component);
+	var portfolioPage = function (_React$Component) {
+		_inherits(portfolioPage, _React$Component);
 
-		function aboutPage() {
-			_classCallCheck(this, aboutPage);
+		function portfolioPage() {
+			_classCallCheck(this, portfolioPage);
 
-			return _possibleConstructorReturn(this, (aboutPage.__proto__ || Object.getPrototypeOf(aboutPage)).apply(this, arguments));
+			return _possibleConstructorReturn(this, (portfolioPage.__proto__ || Object.getPrototypeOf(portfolioPage)).apply(this, arguments));
 		}
 
-		_createClass(aboutPage, [{
+		_createClass(portfolioPage, [{
 			key: "render",
 			value: function render() {
 				return _react2.default.createElement(
@@ -36998,24 +37009,82 @@
 					_react2.default.createElement(
 						"h1",
 						null,
-						"About"
+						"Portfolio"
 					),
 					_react2.default.createElement(
 						"p",
 						null,
-						"This application uses React, Redux and React Router and a variety of other helpful libraries"
+						"My portfolio"
 					)
 				);
 			}
 		}]);
 
-		return aboutPage;
+		return portfolioPage;
 	}(_react2.default.Component);
 
-	exports.default = aboutPage;
+	exports.default = portfolioPage;
 
 /***/ },
 /* 565 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(298);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var interestsPage = function (_React$Component) {
+		_inherits(interestsPage, _React$Component);
+
+		function interestsPage() {
+			_classCallCheck(this, interestsPage);
+
+			return _possibleConstructorReturn(this, (interestsPage.__proto__ || Object.getPrototypeOf(interestsPage)).apply(this, arguments));
+		}
+
+		_createClass(interestsPage, [{
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"div",
+					{ className: "jumbotron" },
+					_react2.default.createElement(
+						"h1",
+						null,
+						"Interests"
+					),
+					_react2.default.createElement(
+						"p",
+						null,
+						"My interests"
+					)
+				);
+			}
+		}]);
+
+		return interestsPage;
+	}(_react2.default.Component);
+
+	exports.default = interestsPage;
+
+/***/ },
+/* 566 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -37073,7 +37142,7 @@
 	exports.default = homePage;
 
 /***/ },
-/* 566 */
+/* 567 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37088,7 +37157,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _contactActions = __webpack_require__(567);
+	var _contactActions = __webpack_require__(568);
 
 	var contactActions = _interopRequireWildcard(_contactActions);
 
@@ -37203,7 +37272,7 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(contactPage);
 
 /***/ },
-/* 567 */
+/* 568 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37218,7 +37287,7 @@
 
 	var types = _interopRequireWildcard(_actionTypes);
 
-	var _contactApi = __webpack_require__(568);
+	var _contactApi = __webpack_require__(569);
 
 	var _contactApi2 = _interopRequireDefault(_contactApi);
 
@@ -37239,7 +37308,7 @@
 	}
 
 /***/ },
-/* 568 */
+/* 569 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -37260,8 +37329,6 @@
 		_createClass(contactApi, null, [{
 			key: 'sendContactEmal',
 			value: function sendContactEmal() {
-				debugger;
-				//logic for sending email to node here
 				new Promise(function (res, rej) {
 					fetch("/test", {
 						headers: {
@@ -37270,8 +37337,14 @@
 						},
 						method: "POST",
 						body: JSON.stringify({ a: 1, b: 2 })
-					}).then(function (res) {
-						debugger;console.log(res);
+					})
+					//returns promise
+					.then(function (res) {
+						return res.json();
+					})
+					//gets called after promise completes
+					.then(function (j) {
+						debugger;console.log(j);
 					}).catch(function (res) {
 						debugger;console.log(res);
 					});
