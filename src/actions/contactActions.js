@@ -6,9 +6,9 @@ export function sendContactEmailSuccess(courses){
 }
 
 //thunks always return a function that accepts a dispatch
-export function sendContactEmail(){
+export function sendContactEmail(contact){
 	return function (dispatch){
-		var response = contactApi.sendContactEmal();
+		var response = contactApi.sendContactEmal(contact);
 		console.log(response);
 	};
 }

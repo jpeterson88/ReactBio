@@ -10,24 +10,41 @@ class contactPage extends React.Component {
 		super(props,context);
 
 		this.state = {
-			response: null
+			response: undefined,
+			comments: '',
+			name: '',
+			email: ''
 		};
 
-		this.onClickSubmit = this.onClickSubmit.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleChange = this.handleChange.bind(this);
 	}
 
-	onClickSubmit(){
-		this.props.actions.sendContactEmail();
+handleSubmit(e){
+		e.preventDefault();
+
+		this.props.actions.sendContactEmail(
+		{
+		  "name" : this.state.name,
+			"email" : this.state.email,
+			"comments" : this.state.comments,
+			"subject" : this.state.subject
+		}
+		);
 	}
+	handleChange(event) {
+	    	this.setState({[event.target.name]: event.target.value}, function (){
+			});
+	  }
 
 	render(){
 		return(
 			<div className="container  col-lg-6 col-md-6 col-sm-6 col-xs-6">
 				<h1>Contact Me</h1>
-				<form name="helpForm" role="form">
+				<form name="helpForm" role="form" onChange={this.handleChange} onSubmit={this.handleSubmit}>
 				    <div className="form-group">
 				      <label> Name </label>
-				      <input type="text" name="name" className="form-control" required />
+				      <input type="text" name="name" className="form-control"  required/>
 				    </div>
 
 				    <div className="form-group">
@@ -35,12 +52,18 @@ class contactPage extends React.Component {
 				      <input type="email" name="email" className="form-control" required />
 				    </div>
 
+						<ul className="dropdown-menu" name="subject" aria-labelledby="dropdownMenu2">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+
 				    <div className="form-group">
 				      <label>Description</label>
 				      <textarea name="comments" className="form-control" required></textarea>
 				    </div>
-						
-				    <button onClick={this.onClickSubmit} className="btn btn-default">Submit</button>
+						<button type="submit" className="btn btn-primary">Post</button>
 			  </form>
 			</div>
 		);

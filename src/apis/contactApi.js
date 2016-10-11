@@ -1,20 +1,20 @@
 class contactApi{
-	static sendContactEmal(){
+	static sendContactEmal(contact){
 		new Promise((res, rej) => {
-			fetch("/test",
+			fetch("/contact",
 			{
 					headers: {
 						'Accept': 'application/json',
 						'Content-Type': 'application/json'
 					},
 					method: "POST",
-					body: JSON.stringify({a: 1, b: 2})
+					body: JSON.stringify({name: contact.name, email: contact.email, comments: contact.comments})
 			})
 			//returns promise
 			.then(function(res){ return res.json(); })
 			//gets called after promise completes
-			.then(function(j){ debugger; console.log(j); })
-			.catch(function(res){debugger; console.log(res) })
+			.then(function(j){ console.log(j); })
+			.catch(function(res){ console.log(res) })
 		});
 	}
 }

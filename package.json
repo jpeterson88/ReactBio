@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack npm start server"
   },
   "repository": {
     "type": "git",
@@ -18,10 +19,13 @@
   "homepage": "https://github.com/jpeterson88/ReactBio#readme",
   "dependencies": {
     "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
     "babel-preset-react": "^6.16.0",
     "body-parser": "^1.15.2",
     "bootstrap": "^3.3.7",
+    "css-loader": "^0.25.0",
     "express": "^4.14.0",
+    "file-loader": "^0.9.0",
     "nodemailer": "^2.6.4",
     "open": "0.0.5",
     "react": "^15.3.2",
@@ -31,6 +35,8 @@
     "redux": "^3.6.0",
     "redux-immutable-state-invariant": "^1.2.4",
     "redux-thunk": "^2.1.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
     "webpack": "^1.13.2"
   },
   "devDependencies": {
