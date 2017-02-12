@@ -2,7 +2,8 @@ import React from 'react';
 import * as contactActions from '../actions/contactActions';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-
+import DropdownButton from 'react-bootstrap/lib/DropdownButton';
+import MenuItem from 'react-bootstrap/lib/MenuItem';
 
 class contactPage extends React.Component {
 
@@ -13,35 +14,45 @@ class contactPage extends React.Component {
 			response: undefined,
 			comments: '',
 			name: '',
-			email: ''
+			email: '',
+			subject: 'Inquiries'
 		};
 
 		this.handleSubmit = this.handleSubmit.bind(this);
-		this.handleChange = this.handleChange.bind(this);
+		this.handleFormChange = this.handleFormChange.bind(this);
+		this.handleDropdownSelect = this.handleDropdownSelect.bind(this);
+
 	}
 
 handleSubmit(e){
 		e.preventDefault();
-
 		this.props.actions.sendContactEmail(
-		{
-		  "name" : this.state.name,
-			"email" : this.state.email,
-			"comments" : this.state.comments,
-			"subject" : this.state.subject
-		}
+			{
+			  "name" : this.state.name,
+				"email" : this.state.email,
+				"comments" : this.state.comments,
+				"subject" : this.state.subject
+			}
 		);
 	}
-	handleChange(event) {
+	handleFormChange(event) {
 	    	this.setState({[event.target.name]: event.target.value}, function (){
+
+
 			});
 	  }
 
+		handleDropdownSelect(subjectValue){
+			this.setState({['subject']: subjectValue}, function (){
+			});
+			}
+
+
 	render(){
 		return(
-			<div className="container  col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			<div className="container col-xs-4">
 				<h1>Contact Me</h1>
-				<form name="helpForm" role="form" onChange={this.handleChange} onSubmit={this.handleSubmit}>
+				<form name="helpForm" role="form" onChange={this.handleFormChange} onSubmit={this.handleSubmit}>
 				    <div className="form-group">
 				      <label> Name </label>
 				      <input type="text" name="name" className="form-control"  required/>
@@ -52,12 +63,16 @@ handleSubmit(e){
 				      <input type="email" name="email" className="form-control" required />
 				    </div>
 
-						<ul className="dropdown-menu" name="subject" aria-labelledby="dropdownMenu2">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li><a href="#">Separated link</a></li>
-						</ul>
+						<div className="form-group">
+							<label>Subject</label>
+							<div>
+								<DropdownButton title={this.state.subject} id="bg-nested-dropdown" onSelect={this.handleDropdownSelect}>
+									<MenuItem eventKey="General">General</MenuItem>
+									<MenuItem eventKey="Professional">Professional</MenuItem>
+									<MenuItem eventKey="Bug">Report Bug</MenuItem>
+								</DropdownButton>
+							</div>
+						</div>
 
 				    <div className="form-group">
 				      <label>Description</label>

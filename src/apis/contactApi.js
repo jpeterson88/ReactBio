@@ -8,7 +8,7 @@ class contactApi{
 						'Content-Type': 'application/json'
 					},
 					method: "POST",
-					body: JSON.stringify({name: contact.name, email: contact.email, comments: contact.comments})
+					body: JSON.stringify({name: contact.name, email: contact.email, comments: contact.comments, subject: contact.subject})
 			})
 			//returns promise
 			.then(function(res){ return res.json(); })
