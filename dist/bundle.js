@@ -37120,7 +37120,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-			value: true
+		value: true
 	});
 
 	var _react = __webpack_require__(298);
@@ -37136,75 +37136,50 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function Header() {
-			return (
-					/*<nav>
-	    		<IndexLink to="/">Home</IndexLink>
-	    			{" | "}
-	    			<Link to="/portfolio" activeClassName="active">Portfolio</Link>
-	    			{" | "}
-	    			<Link to="/interests" activeClassName="active">Interests</Link>
-	    			{" | "}
-	    			<Link to="/contact" activeClassName="active">Contact</Link>
-	    </nav>*/
+		return _react2.default.createElement(
+			_reactBootstrap.Navbar,
+			null,
+			_react2.default.createElement(
+				_reactBootstrap.Nav,
+				{ pullLeft: true },
+				_react2.default.createElement(
+					_reactRouterBootstrap.LinkContainer,
+					{ to: '/' },
 					_react2.default.createElement(
-							_reactBootstrap.Navbar,
-							null,
-							_react2.default.createElement(
-									_reactBootstrap.Nav,
-									{ pullLeft: true },
-									_react2.default.createElement(
-											_reactRouterBootstrap.LinkContainer,
-											{ to: '/' },
-											_react2.default.createElement(
-													_reactBootstrap.NavItem,
-													null,
-													'Home'
-											)
-									),
-									_react2.default.createElement(
-											_reactRouterBootstrap.LinkContainer,
-											{ to: '/portfolio' },
-											_react2.default.createElement(
-													_reactBootstrap.NavItem,
-													null,
-													'Portfolio'
-											)
-									),
-									_react2.default.createElement(
-											_reactRouterBootstrap.LinkContainer,
-											{ to: '/interests' },
-											_react2.default.createElement(
-													_reactBootstrap.NavItem,
-													null,
-													'Interests'
-											)
-									),
-									_react2.default.createElement(
-											_reactRouterBootstrap.LinkContainer,
-											{ to: '/contact' },
-											_react2.default.createElement(
-													_reactBootstrap.NavItem,
-													null,
-													'Contact'
-											)
-									)
-							)
+						_reactBootstrap.NavItem,
+						null,
+						'Home'
 					)
-
-					/*<Nav pullRight>
-	    <LinkContainer to="/home">
-	      <NavItem eventKey={1}>Home</NavItem>
-	    </LinkContainer>
-	    <LinkContainer to="/book">
-	      <NavItem eventKey={2}>Book Inv</NavItem>
-	    </LinkContainer>
-	    
-	      <LinkContainer to="/logout">
-	        <NavItem eventKey={3}>Logout</NavItem>    
-	      </LinkContainer>      
-	    </Nav>*/
-
-			);
+				),
+				_react2.default.createElement(
+					_reactRouterBootstrap.LinkContainer,
+					{ to: '/portfolio' },
+					_react2.default.createElement(
+						_reactBootstrap.NavItem,
+						null,
+						'Portfolio'
+					)
+				),
+				_react2.default.createElement(
+					_reactRouterBootstrap.LinkContainer,
+					{ to: '/interests' },
+					_react2.default.createElement(
+						_reactBootstrap.NavItem,
+						null,
+						'Interests'
+					)
+				),
+				_react2.default.createElement(
+					_reactRouterBootstrap.LinkContainer,
+					{ to: '/contact' },
+					_react2.default.createElement(
+						_reactBootstrap.NavItem,
+						null,
+						'Contact'
+					)
+				)
+			)
+		);
 	};
 
 	exports.default = Header;
