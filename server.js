@@ -12,6 +12,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //change to be dynamic
 app.listen(5000);
 
+console.log('Running on port 5000...');
+
 app.get('/', function(req, res){
     res.set('Content-Type', 'text/html')
         .sendFile(__dirname + '/src/index.html');
@@ -25,12 +27,6 @@ var transporter = nodemailer.createTransport({
     }
 });
 
-app.post('/test', function(req, res){
-  res.send(req.body);
-  console.log(req.body);
-  console.log(req.body["name"]);
-});
-
 app.post('/contact', function(req, res) {
   if(req.body != null){
     var htmlTpl = '<h4>Message from' + ' ' + req.body["name"] + '</h4><p><span>' + req.body["email"] + '</span</p><p>' + req.body["comments"] + '</p>';
@@ -38,7 +34,7 @@ app.post('/contact', function(req, res) {
         mailOptions = {
             from: req.body["email"],
             to: credentials.email,
-            subject: "req.body.params.subjectList",
+            subject: req.body["subject"] + 'Inquiry',
             html: htmlTpl
         };
 
