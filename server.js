@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var app = express();
 var router = express.Router();
 var nodemailer = require('nodemailer');
-var credentials = require('./sensitive/credentials.js');
+var credentials = require('./sensitive/credentials.json');
 
 app.use(express.static(__dirname));
 app.use( bodyParser.json());

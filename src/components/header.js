@@ -1,17 +1,28 @@
-import React, {PropTypes} from 'react';
-import {Link, IndexLink} from 'react-router';
+import React from 'react'
+import {LinkContainer} from 'react-router-bootstrap'
+import {connect} from 'react-redux'
+import {Nav, Navbar, NavItem, MenuItem} from 'react-bootstrap'
 
-const Header = () =>{
+function Header() {
 	return (
-		<nav>
-				<IndexLink to="/" activeClassName="active">Home</IndexLink>
-					{" | "}
-					<Link to="/portfolio" activeClassName="active">Portfolio</Link>
-					{" | "}
-					<Link to="/interests" activeClassName="active">Interests</Link>
-					{" | "}
-					<Link to="/contact" activeClassName="active">Contact</Link>
-		</nav>
+		<Navbar>
+
+			<Nav pullLeft>
+				<LinkContainer to="/">
+								<NavItem>Home</NavItem>
+				</LinkContainer>
+				<LinkContainer to="/portfolio">
+								<NavItem>Portfolio</NavItem>
+				</LinkContainer>
+				<LinkContainer to="/interests">
+								<NavItem>Interests</NavItem>
+				</LinkContainer>
+				<LinkContainer to="/contact">
+								<NavItem >Contact</NavItem>
+				</LinkContainer>
+			</Nav>
+
+		</Navbar>
 	);
 };
 

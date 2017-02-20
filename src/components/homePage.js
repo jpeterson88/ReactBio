@@ -1,14 +1,14 @@
 import React from 'react';
 
-class homePage extends React.Component {
-	render(){
+function homePage() {
+
 		return(
 			<div className="jumbotron">
-				<h1>Home 2</h1>
+				<h1>Home Test</h1>
 				<p>This is the home page</p>
 			</div>
 		);
-	}
+	
 }
 
 export default homePage;
