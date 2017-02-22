@@ -1,9 +1,7 @@
 import React from 'react';
 import * as contactActions from '../actions/contactActions';
 import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import DropdownButton from 'react-bootstrap/lib/DropdownButton';
-import MenuItem from 'react-bootstrap/lib/MenuItem';
+
 
 class contactPage extends React.Component {
 
@@ -37,8 +35,6 @@ handleSubmit(e){
 	}
 	handleFormChange(event) {
 	    	this.setState({[event.target.name]: event.target.value}, function (){
-
-
 			});
 	  }
 

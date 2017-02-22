@@ -7,7 +7,7 @@ function Header() {
 	return (
 		<Navbar>
 
-			<Nav pullLeft>
+			<Nav >
 				<LinkContainer to="/">
 								<NavItem>Home</NavItem>
 				</LinkContainer>

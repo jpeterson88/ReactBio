@@ -37141,7 +37141,7 @@
 			null,
 			_react2.default.createElement(
 				_reactBootstrap.Nav,
-				{ pullLeft: true },
+				null,
 				_react2.default.createElement(
 					_reactRouterBootstrap.LinkContainer,
 					{ to: '/' },
