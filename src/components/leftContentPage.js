@@ -2,6 +2,7 @@ import React from 'react';
 import * as contactActions from '../actions/contactActions';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
+import Header from './header';
 
 class leftContentPage extends React.Component {
     constructor(){
@@ -10,8 +11,9 @@ class leftContentPage extends React.Component {
 
     render(){
         return(
-            <div class="span6">
-
+            <div className="jumbotron stretch-it content-panel inline left-panel">                
+                <h1>Left Page</h1>
+				<p>This is the left content page</p>        
             </div>
         );
     }

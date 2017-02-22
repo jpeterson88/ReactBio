@@ -10,8 +10,9 @@ class rightContentPage extends React.Component {
 
     render(){
         return(
-            <div class="span6">
-
+            <div className="jumbotron stretch-it content-panel inline right-panel">
+                <h1>Right Page</h1>
+				<p>This is the right content page</p> 
             </div>
         );
     }

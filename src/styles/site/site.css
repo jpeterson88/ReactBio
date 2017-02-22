@@ -1,0 +1,29 @@
+.content-panel {
+    width: 50%;
+    height: 100%;    
+}
+
+.left-panel {
+    background-color: beige;
+}
+
+.right-panel {
+    background-color: lightsteelblue;
+}
+
+.no-spacing{
+    padding: 0px;
+    margin: 0px;
+}
+
+html, body{
+    height: 100%
+}
+
+.stretch-it{
+    height:100%
+}
+
+.inline {
+    display: inline-block;
+}
