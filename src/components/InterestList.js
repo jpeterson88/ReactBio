@@ -6,7 +6,7 @@ const interests = props.interests.map((interest)=> {
 						return <li key={interest.key}> {interest.value}</li>
 					});
 	return(
-		<ul className="jumbotron">
+		<ul>
 			{interests}
 		</ul>
 	);	

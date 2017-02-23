@@ -3,23 +3,28 @@ import LeftPanel from './leftContentPage';
 import RightPanel from './rightContentPage';
 
 class app extends React.Component{
-	constructor(props){
-		super(props);
-		this.state = { rightPanelContext: "home" };
-		this.setRightPanelContext = this.setRightPanelContext.bind(this);
+	constructor(){
+		super();
+		this.state = { rightPanelContext: "home" };	
+		
+		this.handleRightPanelSelection = this.handleRightPanelSelection.bind(this);
 	}
-	
-	setRightPanelContext(selectedPage){
+
+	handleRightPanelSelection(selectedPage){		
 		this.setState({
 			rightPanelContext: selectedPage
 		});
 	}
 
-	render(){
+	render(){		
 		return(
 			<div className="stretch-it">
-				<LeftPanel selectPage={this.setRightPanelContext}/>
-				<RightPanel context={this.state.rightPanelContext}/>
+				<div className="jumbotron stretch-it content-panel inline left-panel">
+					<LeftPanel setPageContext={(i) => this.handleRightPanelSelection(i)}/>
+				</div>			
+				<div className="jumbotron stretch-it content-panel inline right-panel">
+					<RightPanel context={this.state.rightPanelContext }  className="jumbotron stretch-it content-panel inline right-panel"/>
+				</div>				
 			</div>
 		);
 	}

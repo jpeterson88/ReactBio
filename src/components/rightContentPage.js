@@ -24,10 +24,9 @@ var renderElement = null;
             renderElement = <Home/>
     }
 
-
     return(
-        <div className="jumbotron stretch-it content-panel inline right-panel" id="rightPanel">
-            {props.rightPanelContext}
+        <div>
+            {renderElement}
         </div>
     );
 }
