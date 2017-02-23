@@ -5,8 +5,7 @@ import RightPanel from './rightContentPage';
 class app extends React.Component{
 	constructor(){
 		super();
-		this.state = { rightPanelContext: "home" };	
-		
+		this.state = { rightPanelContext: "home" };			
 		this.handleRightPanelSelection = this.handleRightPanelSelection.bind(this);
 	}
 

@@ -37098,7 +37098,6 @@
 			var _this = _possibleConstructorReturn(this, (app.__proto__ || Object.getPrototypeOf(app)).call(this));
 
 			_this.state = { rightPanelContext: "home" };
-
 			_this.handleRightPanelSelection = _this.handleRightPanelSelection.bind(_this);
 			return _this;
 		}
@@ -37288,7 +37287,18 @@
 				null,
 				'My Interests'
 			),
-			_react2.default.createElement(_InterestList2.default, { interests: interests })
+			_react2.default.createElement(
+				'ul',
+				null,
+				interests.map(function (interest) {
+					return _react2.default.createElement(
+						'li',
+						{ key: interest.key },
+						' ',
+						interest.value
+					);
+				})
+			)
 		);
 	}
 
