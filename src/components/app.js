@@ -1,26 +1,25 @@
 import React, {PropTypes} from 'react';
-import Header from './header';
-import LeftContent from './leftContentPage';
-import RightContent from './rightContentPage';
-import {Grid,Row, Col} from 'react-bootstrap'
+import LeftPanel from './leftContentPage';
+import RightPanel from './rightContentPage';
 
 class app extends React.Component{
+	constructor(props){
+		super(props);
+		this.state = { rightPanelContext: "home" };
+		this.setRightPanelContext = this.setRightPanelContext.bind(this);
+	}
+	
+	setRightPanelContext(selectedPage){
+		this.setState({
+			rightPanelContext: selectedPage
+		});
+	}
+
 	render(){
 		return(
-			/*<Grid className="stretch-it no-spacing">
-				<Row className="stretch-it no-spacing">
-
-					<Col className="left-panel stretch-it no-spacing">
-						<LeftContent/>
-					</Col>
-					<Col className="right-panel stretch-it no-spacing">
-						<RightContent />
-					</Col>					
-				</Row>
-			</Grid>*/
 			<div className="stretch-it">
-				<LeftContent/>
-				<RightContent/>
+				<LeftPanel selectPage={this.setRightPanelContext}/>
+				<RightPanel context={this.state.rightPanelContext}/>
 			</div>
 		);
 	}
@@ -29,6 +28,5 @@ class app extends React.Component{
 app.propTypes = {
 	children: PropTypes.object.isRequired
 };
-
 
 export default app;
