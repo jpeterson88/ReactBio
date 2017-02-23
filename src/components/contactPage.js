@@ -21,7 +21,6 @@ class contactPage extends React.Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleFormChange = this.handleFormChange.bind(this);
 		this.handleDropdownSelect = this.handleDropdownSelect.bind(this);
-
 	}
 
 handleSubmit(e){

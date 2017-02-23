@@ -7,7 +7,8 @@ function leftContentPage(props){
             <p>This is the left content page</p>
             <button onClick={() => props.setPageContext("interest")}>Interests</button>
             <button onClick={() => props.setPageContext("home")}>Home</button>
-            <button onClick={() => props.setPageContext("portfolio")}>Portfolio</button>       
+            <button onClick={() => props.setPageContext("contact")}>Contact</button>
+            <button onClick={() => props.setPageContext("portfolio")}>Portfolio</button>
         </div>
     );
 }

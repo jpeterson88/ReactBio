@@ -37189,6 +37189,13 @@
 	        _react2.default.createElement(
 	            "button",
 	            { onClick: function onClick() {
+	                    return props.setPageContext("contact");
+	                } },
+	            "Contact"
+	        ),
+	        _react2.default.createElement(
+	            "button",
+	            { onClick: function onClick() {
 	                    return props.setPageContext("portfolio");
 	                } },
 	            "Portfolio"
@@ -37224,16 +37231,19 @@
 
 	var _homePage2 = _interopRequireDefault(_homePage);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	var _contactPage = __webpack_require__(581);
 
-	// import Contact from './contactPage';
+	var _contactPage2 = _interopRequireDefault(_contactPage);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function rightContentPage(props) {
 
 	    var dict = {
 	        "home": _react2.default.createElement(_homePage2.default, null),
 	        "portfolio": _react2.default.createElement(_portfolioPage2.default, null),
-	        "interest": _react2.default.createElement(_interestsPage2.default, null)
+	        "interest": _react2.default.createElement(_interestsPage2.default, null),
+	        "contact": _react2.default.createElement(_contactPage2.default, null)
 	    };
 
 	    var renderElement = dict[props.context];
@@ -37423,7 +37433,6 @@
 			_this.handleSubmit = _this.handleSubmit.bind(_this);
 			_this.handleFormChange = _this.handleFormChange.bind(_this);
 			_this.handleDropdownSelect = _this.handleDropdownSelect.bind(_this);
-
 			return _this;
 		}
 
