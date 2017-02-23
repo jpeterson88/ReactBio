@@ -23,8 +23,8 @@ class app extends React.Component{
 				</div>			
 				<div className="jumbotron stretch-it content-panel inline right-panel">
 					<RightPanel context={this.state.rightPanelContext }  className="jumbotron stretch-it content-panel inline right-panel"/>
-				</div>				
-			</div>
+				</div>		
+			</div>	
 		);
 	}
 }
