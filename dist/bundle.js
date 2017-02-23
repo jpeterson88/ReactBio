@@ -37229,24 +37229,14 @@
 	// import Contact from './contactPage';
 
 	function rightContentPage(props) {
-	    var renderElement = null;
 
-	    switch (props.context) {
-	        case 'home':
-	            renderElement = _react2.default.createElement(_homePage2.default, null);
-	            break;
-	        case 'portfolio':
-	            renderElement = _react2.default.createElement(_portfolioPage2.default, null);
-	            break;
-	        // case 'contact':
-	        //     renderElement = <Contact/>
-	        //     break
-	        case 'interest':
-	            renderElement = _react2.default.createElement(_interestsPage2.default, null);
-	            break;
-	        default:
-	            renderElement = _react2.default.createElement(_homePage2.default, null);
-	    }
+	    var dict = {
+	        "home": _react2.default.createElement(_homePage2.default, null),
+	        "portfolio": _react2.default.createElement(_portfolioPage2.default, null),
+	        "interest": _react2.default.createElement(_interestsPage2.default, null)
+	    };
+
+	    var renderElement = dict[props.context];
 
 	    return _react2.default.createElement(
 	        'div',

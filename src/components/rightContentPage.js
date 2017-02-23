@@ -5,24 +5,14 @@ import Home from './homePage';
 // import Contact from './contactPage';
 
 function rightContentPage (props){
-var renderElement = null;
 
-    switch(props.context){
-        case 'home':
-            renderElement = <Home/>
-            break
-        case 'portfolio':
-            renderElement = <Portfolio/>
-            break
-        // case 'contact':
-        //     renderElement = <Contact/>
-        //     break
-        case 'interest':
-            renderElement = <Interest/>
-            break
-        default:
-            renderElement = <Home/>
-    }
+var dict = {
+  "home": <Home/>,
+  "portfolio": <Portfolio/>,
+  "interest": <Interest/>
+};
+
+var renderElement = dict[props.context];
 
     return(
         <div>
