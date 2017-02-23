@@ -1,8 +1,6 @@
 .content-panel {
     width: 50%;
-    height: 100%;    
-    padding: 0px;
-    margin: 0px;
+    height: 100%;
     vertical-align: top;
 }
 
@@ -14,9 +12,8 @@
     background-color: lightsteelblue;
 }
 
-
 html, body{
-    height: 100%
+    height: 100%;
 }
 
 .stretch-it{

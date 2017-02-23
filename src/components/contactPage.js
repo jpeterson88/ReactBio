@@ -47,7 +47,7 @@ handleSubmit(e){
 
 	render(){
 		return(
-			<div className="container col-xs-4">
+			<div>
 				<h1>Contact Me</h1>
 				<form name="helpForm" role="form" onChange={this.handleFormChange} onSubmit={this.handleSubmit}>
 				    <div className="form-group">

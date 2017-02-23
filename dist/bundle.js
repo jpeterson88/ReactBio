@@ -37112,21 +37112,17 @@
 		}, {
 			key: 'render',
 			value: function render() {
-				var _this2 = this;
-
 				return _react2.default.createElement(
 					'div',
 					{ className: 'stretch-it' },
 					_react2.default.createElement(
 						'div',
-						{ className: 'jumbotron stretch-it content-panel inline left-panel' },
-						_react2.default.createElement(_leftContentPage2.default, { setPageContext: function setPageContext(i) {
-								return _this2.handleRightPanelSelection(i);
-							} })
+						{ className: 'container jumbotron stretch-it content-panel inline left-panel' },
+						_react2.default.createElement(_leftContentPage2.default, { setPageContext: this.handleRightPanelSelection })
 					),
 					_react2.default.createElement(
 						'div',
-						{ className: 'jumbotron stretch-it content-panel inline right-panel' },
+						{ className: 'container jumbotron stretch-it content-panel inline right-panel' },
 						_react2.default.createElement(_rightContentPage2.default, { context: this.state.rightPanelContext, className: 'jumbotron stretch-it content-panel inline right-panel' })
 					)
 				);
@@ -37462,7 +37458,7 @@
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					{ className: 'container col-xs-4' },
+					null,
 					_react2.default.createElement(
 						'h1',
 						null,
@@ -43037,7 +43033,7 @@
 
 
 	// module
-	exports.push([module.id, ".content-panel {\n    width: 50%;\n    height: 100%;    \n    padding: 0px;\n    margin: 0px;\n    vertical-align: top;\n}\n\n.left-panel {\n    background-color: beige;\n}\n\n.right-panel {\n    background-color: lightsteelblue;\n}\n\n\nhtml, body{\n    height: 100%\n}\n\n.stretch-it{\n    height:100%\n}\n\n.inline {\n    display: inline-block;\n}", ""]);
+	exports.push([module.id, ".content-panel {\n    width: 50%;\n    height: 100%;\n    vertical-align: top;\n}\n\n.left-panel {\n    background-color: beige;\n}\n\n.right-panel {\n    background-color: lightsteelblue;\n}\n\nhtml, body{\n    height: 100%;\n}\n\n.stretch-it{\n    height:100%\n}\n\n.inline {\n    display: inline-block;\n}", ""]);
 
 	// exports
 
