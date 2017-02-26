@@ -18,10 +18,10 @@ class app extends React.Component{
 	render(){		
 		return(
 			<div className="stretch-it">
-				<div className="container jumbotron stretch-it content-panel inline left-panel">
+				<div className="container jumbotron stretch-it inline left-panel">
 					<LeftPanel setPageContext={this.handleRightPanelSelection}/>
 				</div>			
-				<div className="container jumbotron stretch-it content-panel inline right-panel">
+				<div className="container jumbotron stretch-it inline right-panel">
 					<RightPanel context={this.state.rightPanelContext }  className="jumbotron stretch-it content-panel inline right-panel"/>
 				</div>		
 			</div>	

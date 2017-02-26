@@ -37117,12 +37117,12 @@
 					{ className: 'stretch-it' },
 					_react2.default.createElement(
 						'div',
-						{ className: 'container jumbotron stretch-it content-panel inline left-panel' },
+						{ className: 'container jumbotron stretch-it inline left-panel' },
 						_react2.default.createElement(_leftContentPage2.default, { setPageContext: this.handleRightPanelSelection })
 					),
 					_react2.default.createElement(
 						'div',
-						{ className: 'container jumbotron stretch-it content-panel inline right-panel' },
+						{ className: 'container jumbotron stretch-it inline right-panel' },
 						_react2.default.createElement(_rightContentPage2.default, { context: this.state.rightPanelContext, className: 'jumbotron stretch-it content-panel inline right-panel' })
 					)
 				);
@@ -37458,7 +37458,7 @@
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					null,
+					{ md: 8, lg: 8, xl: 8 },
 					_react2.default.createElement(
 						'h1',
 						null,
@@ -43033,7 +43033,7 @@
 
 
 	// module
-	exports.push([module.id, ".content-panel {\n    width: 50%;\n    height: 100%;\n    vertical-align: top;\n}\n\n.left-panel {\n    background-color: beige;\n}\n\n.right-panel {\n    background-color: lightsteelblue;\n}\n\nhtml, body{\n    height: 100%;\n}\n\n.stretch-it{\n    height:100%\n}\n\n.inline {\n    display: inline-block;\n}", ""]);
+	exports.push([module.id, "\n.left-panel {\n    background-color: antiquewhite;\n    width: 33.3%;\n    height: 100%;\n    vertical-align: top;\n}\n\n.right-panel {\n    background-color: lightseagreen;\n        width: 66.66%;\n    height: 100%;\n    vertical-align: top;\n}\n\nhtml, body{\n    height: 100%;\n}\n\n.stretch-it{\n    height:100%\n}\n\n.inline {\n    display: inline-block;\n}", ""]);
 
 	// exports
 

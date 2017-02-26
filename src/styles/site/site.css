@@ -1,15 +1,16 @@
-.content-panel {
-    width: 50%;
+
+.left-panel {
+    background-color: antiquewhite;
+    width: 33.3%;
     height: 100%;
     vertical-align: top;
 }
 
-.left-panel {
-    background-color: beige;
-}
-
 .right-panel {
-    background-color: lightsteelblue;
+    background-color: lightseagreen;
+        width: 66.66%;
+    height: 100%;
+    vertical-align: top;
 }
 
 html, body{
